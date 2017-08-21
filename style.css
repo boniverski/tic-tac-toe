@@ -11,13 +11,34 @@ html, body {
   justify-content: center;
   align-items: center; }
 
+.marker__select {
+  position: absolute;
+  background: blue;
+  width: 15em;
+  height: 6em;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  z-index: 1; }
+  .marker__select .marker {
+    margin: 1em;
+    padding: 0.9em 0 0 0;
+    background: yellow;
+    width: 2em;
+    height: 2em; }
+
 .board {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  min-width: 500px;
-  min-height: 500px; }
-  .board .square {
+  max-width: 31.25em;
+  min-width: 31.25em;
+  height: 31.25em; }
+  .board__tile {
+    float: left;
+    background: lightgray;
     box-sizing: border-box;
     border: 1px solid black;
-    width: calc(100% / 3); }
+    width: calc(31.25em / 3);
+    height: calc(31.25em / 3); }
