@@ -9,7 +9,7 @@ $('document').ready(function(){
       '', '', '',
       '', '', '',
     ];
-
+    $('.winner').css('display', 'none');
     let _generateAvailableMoves = function(){
       let moves = [];
       for (let i = 0; i < 9; i++){
@@ -49,20 +49,18 @@ $('document').ready(function(){
           return;
         }
       }
-      return 'It\'s a draw';
+      return 'It\'s a draw!';
     }
 
     let _evaluateLine = function(field1, field2, field3){
       let score = 0;
 
-      //First field
       if(_board[field1] === computerSeed){
         score = 1;
       } else if (_board[field1] === playerSeed){
         score = -1;
       }
 
-      //Secound cell
       if(_board[field2] === computerSeed){
         if(score === 1) {
           score = 10;
@@ -81,7 +79,6 @@ $('document').ready(function(){
         }
       }
 
-      //Third cell
       if(_board[field3] === computerSeed){
         if (score > 0){
           score *= 10;
@@ -201,12 +198,10 @@ $('document').ready(function(){
   $('.marker-x').click(function(){
     ticTacToe.setSeeds('X');
     $('.markers').css('display', 'none');
-    $('.board').css('display', 'flex');
   });
   $('.marker-o').click(function(){
     ticTacToe.setSeeds('O');
     $('.markers').css('display', 'none');
-    $('.board').css('display', 'flex');
   });
   $('.reset').click(function(){
     ticTacToe.reset();
