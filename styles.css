@@ -9,20 +9,23 @@ html, body {
   justify-content: center;
   align-items: center; }
 
-.board-wrapper .markers {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 70%; }
-  .board-wrapper .markers__select {
-    font-family: "Raleway";
-    text-align: center;
-    background-color: rgba(66, 59, 52, 0.95);
-    color: white;
-    font-size: 1em;
-    height: 100%;
-    padding: 30px; }
+.board-wrapper {
+  display: flex;
+  flex-direction: column; }
+  .board-wrapper .markers {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%; }
+    .board-wrapper .markers__select {
+      font-family: "Raleway";
+      text-align: center;
+      background-color: rgba(66, 59, 52, 0.95);
+      color: white;
+      font-size: 1em;
+      height: 100%;
+      padding: 30px; }
 
 .board {
   display: flex;
