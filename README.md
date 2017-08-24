@@ -2,7 +2,7 @@
 
 ### freeCodeCamp's Front End Advanced Project
 
-**Description**: Make three X's or O's in row/column/diagonal
+**Description**: Make three of X's or O's in a horizontal, vertical, or diagonal row
 
 **User story:**
 * I can play a game of Tic Tac Toe with the computer.
