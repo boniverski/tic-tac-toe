@@ -1,6 +1,6 @@
 html, body {
-  height: 100vh;
-  margin: 0; }
+  margin: 0;
+  height: 100vh; }
 
 .container {
   width: 100%;
@@ -11,19 +11,38 @@ html, body {
 
 .board-wrapper {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center; }
-  .board-wrapper .marker-select {
-    position: absolute; }
-  .board-wrapper .board {
-    display: flex;
-    width: 31.25em;
-    height: 31.25em;
-    flex-wrap: wrap; }
-    .board-wrapper .board__tile {
-      box-sizing: border-box;
-      flex-grow: calc(31.25em / 3);
-      border: 1px solid black;
-      width: calc(31.25em / 3);
-      height: calc(31.25em / 3); }
+  align-items: center;
+  flex-direction: column; }
+  .board-wrapper .markers {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%; }
+    .board-wrapper .markers__select {
+      font-family: "Raleway";
+      text-align: center;
+      background-color: rgba(66, 59, 52, 0.95);
+      color: white;
+      font-size: 1em;
+      height: 100%;
+      padding: 30px; }
+
+.board {
+  display: flex;
+  /* establish flex container */
+  flex-wrap: wrap;
+  /* enable flex items to wrap */
+  justify-content: space-around; }
+  .board__tile {
+    border: 1px solid black;
+    box-sizing: border-box;
+    flex: 0 0 33.33%;
+    /* don't grow, don't shrink, width */
+    height: 135px;
+    width: 50px;
+    background-color: #999;
+    font-size: 2em;
+    text-align: center;
+    line-height: 135px; }

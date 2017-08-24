@@ -200,12 +200,12 @@ $('document').ready(function(){
 
   $('.marker-x').click(function(){
     ticTacToe.setSeeds('X');
-    $('.marker-select').css('display', 'none');
+    $('.markers').css('display', 'none');
     $('.board').css('display', 'flex');
   });
   $('.marker-o').click(function(){
     ticTacToe.setSeeds('O');
-    $('.marker-select').css('display', 'none');
+    $('.markers').css('display', 'none');
     $('.board').css('display', 'flex');
   });
   $('.reset').click(function(){
